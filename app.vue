@@ -60,7 +60,7 @@ const useIdFunction = () => useId()
         <NuxtPage />
       </NuxtLayout>
 
-      <AppSettings />
+
     </div>
 
     <Toaster />
