@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    '@nuxt/image',
     '@unocss/nuxt',
     'shadcn-nuxt',
     '@vueuse/nuxt',
@@ -40,6 +41,18 @@ export default defineNuxtConfig({
     dirs: [
       './lib',
     ],
+  },
+
+  nitro: {
+    experimental: {
+      database: true
+    },
+    database: {
+      mainDB: {
+        connector: 'sqlite',
+        options: { name: 'db' }
+      }
+    }
   },
 
   compatibilityDate: '2024-12-14',

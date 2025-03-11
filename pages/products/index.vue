@@ -3,9 +3,11 @@
 </script>
 
 <template>
-  <section>
-    <DefaultIncome />
-
+  <div>
     <DefaultProducts />
-  </section>
+  </div>
 </template>
+
+<style scoped>
+
+</style>

@@ -2,19 +2,18 @@
 </script>
 
 <template>
-  <SidebarProvider>
-    <LayoutAppSidebar />
-    <SidebarInset>
-      <LayoutHeader>
-        <DarkToggle />
-      </LayoutHeader>
-      <div class="min-w-0 w-full flex-1 overflow-x-auto p-4 lg:p-6">
+  <div>
+    <DefaultNavbar />
+    <main>
+      <div class="container-wrapper">
         <slot />
       </div>
-    </SidebarInset>
-  </SidebarProvider>
+    </main>
+  </div>
 </template>
 
-<style scoped>
-
+<style lang="css">
+.container-wrapper {
+  @apply w-full mx-auto 4xl:max-w-[1536px] 3xl:max-w-[1400px] max-w-[1300px] px-6
+}
 </style>

@@ -25,16 +25,14 @@ function handleSelectLink(link: string) {
 </script>
 
 <template>
-  <SidebarMenuButton as-child tooltip="Search">
-    <Button variant="outline" size="sm" class="text-xs" @click="openCommand = !openCommand">
-      <Icon name="i-lucide-search" />
-      <span class="font-normal group-data-[collapsible=icon]:hidden">Search documentation</span>
-      <div class="ml-auto flex items-center space-x-0.5 group-data-[collapsible=icon]:hidden">
-        <BaseKbd>{{ metaSymbol }}</BaseKbd>
-        <BaseKbd>K</BaseKbd>
-      </div>
-    </Button>
-  </SidebarMenuButton>
+  <Button variant="outline" size="" class="text-xs gap-2 w-[200px]" @click="openCommand = !openCommand">
+    <Icon name="i-lucide-search" size="14"/>
+    <span class="font-normal group-data-[collapsible=icon]:hidden">Search...</span>
+    <div class="ml-auto flex items-center space-x-0.5">
+      <BaseKbd>{{ metaSymbol }}</BaseKbd>
+      <BaseKbd>K</BaseKbd>
+    </div>
+  </Button>
 
   <CommandDialog v-model:open="openCommand">
     <CommandInput placeholder="Type a command or search..." />

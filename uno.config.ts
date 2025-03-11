@@ -23,11 +23,11 @@ export default defineConfig({
         return {
           // slice `hover:` prefix and passed to the next variants and rules
           matcher: matcher.substring(match[0].length),
-          selector: s => `${s}:nth-child(${match[1]})`,
+          selector: s => `${s}:nth-child(${match[1]})`
         }
       },
-      multiPass: true,
-    },
+      multiPass: true
+    }
   ],
   theme: {
     colors: {
@@ -38,39 +38,42 @@ export default defineConfig({
       'sidebar-accent': 'hsl(var(--sidebar-accent))',
       'sidebar-accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
       'sidebar-border': 'hsl(var(--sidebar-border))',
-      'sidebar-ring': 'hsl(var(--sidebar-ring))',
+      'sidebar-ring': 'hsl(var(--sidebar-ring))'
     },
     animation: {
       keyframes: {
-        'spin-slow': '{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}',
+        'spin-slow': '{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}'
       },
       counts: {
-        'spin-slow': 'infinite',
+        'spin-slow': 'infinite'
       },
       durations: {
-        'spin-slow': '3s',
-      },
+        'spin-slow': '3s'
+      }
     },
+    breakpoints: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1400px',
+      '3xl': '1600px',
+      '4xl': '1800px'
+    }
   },
   presets: [
     presetUno(),
     presetAttributify(),
     presetIcons({
-      scale: 1.2,
+      scale: 1.2
     }),
     presetTypography(),
-    presetWebFonts({
-      fonts: {
-        sans: 'Chivo',
-        mono: 'Chivo Mono',
-      },
-    }),
     presetAnimations(),
-    presetShadcn(builtinColors.map(c => ({ color: c }))),
+    presetShadcn(builtinColors.map(c => ({ color: c })))
   ],
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup({ separators: [':'] }),
+    transformerVariantGroup({ separators: [':'] })
   ],
   content: {
     pipeline: {
@@ -78,9 +81,9 @@ export default defineConfig({
         // the default
         /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
         // include js/ts files
-        'components/ui/**/*.{js,ts}',
-      ],
-    },
+        'components/ui/**/*.{js,ts}'
+      ]
+    }
   },
   preflights: [
     {
@@ -117,7 +120,7 @@ export default defineConfig({
           --sidebar-border: 240 3.7% 15.9%;
           --sidebar-ring: 217.2 91.2% 59.8%;
         }
-      `,
-    },
-  ],
+      `
+    }
+  ]
 })

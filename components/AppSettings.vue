@@ -7,7 +7,7 @@ const isOpen = ref(false)
 <template>
   <Sheet v-if="isDesktop" v-model:open="isOpen">
     <SheetTrigger as-child>
-      <Button class="fixed top-1/2 z-50 pr-6 -right-3">
+      <Button id="appSettingsButton" aria-label="App Settings Button" size="icon" variant="ghost">
         <Icon name="i-lucide-settings" class="animate-spin-slow" size="18" />
       </Button>
     </SheetTrigger>
@@ -24,7 +24,7 @@ const isOpen = ref(false)
 
   <Drawer v-else v-model:open="isOpen">
     <DrawerTrigger as-child>
-      <Button class="fixed top-1/2 z-50 pr-6 -right-3">
+      <Button id="appSettingsButton" aria-label="App Settings Button" size="icon" variant="ghost">
         <Icon name="i-lucide-settings" class="animate-spin-slow" size="18" />
       </Button>
     </DrawerTrigger>
