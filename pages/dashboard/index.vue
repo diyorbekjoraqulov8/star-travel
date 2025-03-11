@@ -3,9 +3,7 @@ import {useForm} from "vee-validate";
 import {toTypedSchema} from "@vee-validate/zod";
 import * as z from 'zod'
 
-nextTick(() => {
-  apiGetALlProducts()
-})
+apiGetALlProducts()
 
 definePageMeta({
   layout: 'dashboard'
