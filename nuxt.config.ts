@@ -41,5 +41,9 @@ export default defineNuxtConfig({
     ],
   },
 
+  runtimeConfig: {
+    MONGO_URI: process.env.MONGO_URI,
+  },
+
   compatibilityDate: '2024-12-14',
 })
