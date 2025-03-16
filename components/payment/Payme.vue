@@ -36,7 +36,7 @@ const details = {
 
 <template>
   <div>
-    <form method="POST" action="https://test.paycom.uz">
+    <form method="POST" action="https://checkout.paycom.uz">
 
       <!-- Идентификатор WEB Кассы -->
       <input type="hidden" name="merchant" value="666a96d069ec2ab057da04ac"/>
