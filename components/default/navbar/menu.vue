@@ -50,8 +50,8 @@ const components: { title: string, href: string, description: string }[] = [
             <li class="row-span-3">
               <NavigationMenuLink as-child>
                 <NuxtLink
-                    class="h-full w-full flex flex-col select-none justify-end rounded-md from-muted/50 to-muted bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
-                    to="/"
+                  class="h-full w-full flex flex-col select-none justify-end rounded-md from-muted/50 to-muted bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
+                  to="/"
                 >
                   <img src="https://www.radix-vue.com/logo.svg" class="h-6 w-6" alt="radix-logo">
                   <div class="mb-2 mt-4 text-lg font-medium">
@@ -81,10 +81,10 @@ const components: { title: string, href: string, description: string }[] = [
         <NavigationMenuContent>
           <ul class="grid w-[400px] gap-3 p-4 md:grid-cols-2 lg:w-[600px] md:w-[500px]">
             <NavigationMenuDemoItem
-                v-for="component in components"
-                :key="component.title"
-                :title="component.title"
-                :href="component.href"
+              v-for="component in components"
+              :key="component.title"
+              :title="component.title"
+              :href="component.href"
             >
               {{ component.description }}
             </NavigationMenuDemoItem>

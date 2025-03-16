@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import {useForm} from "vee-validate";
-import {toTypedSchema} from "@vee-validate/zod";
+import { toTypedSchema } from '@vee-validate/zod'
+import { useForm } from 'vee-validate'
 import * as z from 'zod'
 
 apiGetALlProducts()
 
 definePageMeta({
-  layout: 'dashboard'
+  layout: 'dashboard',
 })
 
 const formSchema = toTypedSchema(z.object({
@@ -22,22 +22,22 @@ const form = useForm({
 const onSubmit = form.handleSubmit(async (values) => {
   console.log('Form submitted!', values)
 
-  const { data } = await useFetch('/api/admin/products/create', {method: "POST", body: values})
+  const { data } = await useFetch('/api/admin/products/create', { method: 'POST', body: values })
 
   console.log('data: ', data)
 })
 
 interface TypeProducts {
-  id: number,
-  username: string,
-  email: string,
+  id: number
+  username: string
+  email: string
   description?: string
 }
 
 const products = ref<TypeProducts[]>([])
 
 async function apiGetALlProducts() {
-  const { data } = await useFetch('/api/admin/products', {method: "GET", params: {id:1}})
+  const { data } = await useFetch('/api/admin/products', { method: 'GET', params: { id: 1 } })
 
   products.value = data._rawValue
 }
@@ -50,7 +50,7 @@ async function apiGetALlProducts() {
     </div>
 
     Bu Dashboard
-    <form @submit.prevent="onSubmit" class="w-md mx-auto">
+    <form class="mx-auto w-md" @submit.prevent="onSubmit">
       <FormField v-slot="{ componentField }" name="username">
         <FormItem>
           <FormLabel>Username</FormLabel>
@@ -73,7 +73,7 @@ async function apiGetALlProducts() {
         <FormItem>
           <FormLabel>Izoh</FormLabel>
           <FormControl>
-            <Textarea placeholder="Izoh" v-bind="componentField"/>
+            <Textarea placeholder="Izoh" v-bind="componentField" />
           </FormControl>
           <FormMessage />
         </FormItem>

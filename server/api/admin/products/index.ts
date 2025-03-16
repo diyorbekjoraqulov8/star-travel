@@ -1,6 +1,7 @@
 export default defineEventHandler(async (event) => {
-    const db = useDatabase('mainDB')
+    const db = useDatabase("mainDB");
 
-    const result = await db.sql`SELECT * FROM users`
-    return result.rows
+    const users = await db.sql`SELECT * FROM users`;
+
+    return users.rows;
 })
