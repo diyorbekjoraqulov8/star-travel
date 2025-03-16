@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import Skeleton from "@/components/ui/skeleton/Skeleton.vue";
 
-useHead({
-  script: [
-    { src: "https://cdn.paycom.uz/integration/js/checkout.min.js", async: true }
-  ]
-});
-
 onMounted(() => {
   setTimeout(() => apiProduct(), 0)
 })

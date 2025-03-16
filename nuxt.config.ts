@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-
   modules: [
     '@nuxt/image',
     '@unocss/nuxt',
@@ -41,18 +39,6 @@ export default defineNuxtConfig({
     dirs: [
       './lib',
     ],
-  },
-
-  nitro: {
-    experimental: {
-      database: true
-    },
-    database: {
-      mainDB: {
-        connector: 'sqlite',
-        options: { name: 'db' }
-      }
-    }
   },
 
   compatibilityDate: '2024-12-14',

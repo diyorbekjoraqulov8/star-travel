@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-
-onMounted(() => {
-  // Paycom skriptini yuklash
-  const script = document.createElement("script");
-  script.src = "https://cdn.paycom.uz/integration/js/checkout.min.js";
-  script.async = true;
-  script.onload = () => {
-    if (window.Paycom) {
-      // Skript yuklangandan so‘ng tugmani yaratish
-      Paycom.Button("#form-payme", "#button-container");
-    }
-  };
-  document.body.appendChild(script);
+onNuxtReady(() => {
+    // Paycom skriptini yuklash
+    const script = document.createElement("script");
+    script.src = "https://cdn.paycom.uz/integration/js/checkout.min.js";
+    script.async = true;
+    script.onload = () => {
+      if (window.Paycom) {
+        // Skript yuklangandan so‘ng tugmani yaratish
+        Paycom.Button("#form-payme", "#button-container");
+      }
+    };
+    document.body.appendChild(script);
 });
 
 const details = {
