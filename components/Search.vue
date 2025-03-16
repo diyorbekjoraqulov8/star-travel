@@ -25,8 +25,8 @@ function handleSelectLink(link: string) {
 </script>
 
 <template>
-  <Button variant="outline" size="" class="text-xs gap-2 w-[200px]" @click="openCommand = !openCommand">
-    <Icon name="i-lucide-search" size="14"/>
+  <Button variant="outline" size="" class="w-[200px] gap-2 text-xs" @click="openCommand = !openCommand">
+    <Icon name="i-lucide-search" size="14" />
     <span class="font-normal group-data-[collapsible=icon]:hidden">Search...</span>
     <div class="ml-auto flex items-center space-x-0.5">
       <BaseKbd>{{ metaSymbol }}</BaseKbd>
