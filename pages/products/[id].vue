@@ -14,11 +14,11 @@ const activePayment = ref('PAYME')
 
 async function apiProduct() {
   const productId = route.params.id
-  const { data } = await useFetch(`https://fakestoreapi.com/products/${productId}`)
+  const { data } = await useFetch('/api/products', { productId })
 
-  console.log('data: ', data)
+  console.log('data: ', data.value?.[0])
 
-  product.value = data.value
+  product.value = data.value?.[0]
 }
 
 </script>
@@ -31,11 +31,11 @@ async function apiProduct() {
     </Button>
     <div class="grid grid-cols-2 gap-2 items-center">
       <div class="flex justify-center items-center h-[300px] px-4">
-        <NuxtImg loading="lazy" v-if="false" :src="product.image" class="h-full"/>
+        <NuxtImg loading="lazy" v-if="product?.imageUrl" :src="product?.imageUrl" class="h-full"/>
         <Skeleton v-else class="h-full w-full rounded-xl" />
       </div>
       <div>
-        <div v-if="product.id">
+        <div v-if="product._id">
           <h1 class="text-2xl mb-4">{{ product.title }}</h1>
           <p class="text-sm mb-4">{{ product.description }}</p>
           <p class="text-lg mb-2">{{ product.price }}$</p>

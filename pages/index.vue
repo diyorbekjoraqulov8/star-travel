@@ -4,9 +4,7 @@
 
 <template>
   <section>
-<!--    <DefaultIncome />-->
-
-    <DefaultCarousel />
+    <DefaultIncome />
 
     <DefaultProducts />
   </section>

@@ -4,6 +4,7 @@ import { themes } from '@/lib/registry/themes'
 const { theme, radius, setTheme, setRadius } = useCustomize()
 
 type Color =
+  | 'base'
   | 'zinc'
   | 'slate'
   | 'stone'
@@ -19,6 +20,7 @@ type Color =
 
 // Create an array of color values
 const allColors: Color[] = [
+  'base',
   'zinc',
   'rose',
   'blue',

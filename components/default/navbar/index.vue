@@ -3,12 +3,10 @@
 </script>
 
 <template>
-  <div class="sticky top-0 border-b z-10">
-    <header class="container-wrapper flex items-center justify-between gap-2 bg-background py-4">
+  <div class="default_navbar">
+    <header class="container-wrapper relative flex items-center justify-between gap-2 py-4">
       <nav class="flex items-center gap-x-10">
-        <NuxtLink style="display: block" to="/" class="text-2xl font-extrabold">
-          AIgent
-        </NuxtLink>
+        <LazyLogo />
 
         <DefaultNavbarMenu />
       </nav>
@@ -18,10 +16,8 @@
 
         <div class="flex items-center gap-2 mr-2">
           <Icon name="i-ph-phone" size="20" />
-          +998 (77) 999 99 11
+          +998 (97) 170 21 01
         </div>
-
-        <AppSettings />
 
         <ThemeToggle />
       </div>
@@ -29,6 +25,30 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="css">
+.default_navbar > .container-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  transform: translate(-55%, -40%);
+  background: radial-gradient(
+      circle at center,
+      #FF26DC 0%,
+      rgba(255, 38, 220, 0.3) 0%,
+      rgba(255, 38, 220, 0) 70%
+  );
+  z-index: -10;
+}
 
+@media (max-width: 1000px) {
+  .default_navbar > .container-wrapper:before {
+    width: 100vw;
+    height: 100vw;
+    transform: translate(-50%, -40%);
+  }
+}
 </style>
