@@ -10,7 +10,7 @@ class ProductRepo {
   }
 
   async getById(productId) {
-    return this.model.findById(productId);
+    return this.model.findOne({ id: productId });
   }
 
   async create(data) {

@@ -30,6 +30,8 @@ export default defineConfig({
   ],
   theme: {
     colors: {
+      'primary': 'hsl(178 83% 38%)',
+      'pink': 'hsl(310 100% 57%)',
       'sidebar': 'hsl(var(--sidebar-background))',
       'sidebar-foreground': 'hsl(var(--sidebar-foreground))',
       'sidebar-primary': 'hsl(var(--sidebar-primary))',
