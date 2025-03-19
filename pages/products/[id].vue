@@ -40,7 +40,7 @@ async function apiProduct() {
           <p class="text-sm mb-4">{{ product.description }}</p>
           <p class="text-lg mb-2">{{ product.price }}$</p>
 
-          <p class="mb-2">To'lov qilish</p>
+          <p class="mb-2">{{ $t('payment') }}</p>
 
           <div class="flex gap-2 mb-4">
             <div

@@ -11,19 +11,19 @@ const router = useRouter()
       </Button>
 
       <h1 class="font-bold text-7xl">
-        Butun dunyo bo'ylab
-        <p class="text-pink">Sayohat qil</p>
+        {{ $t('incomeTitle1') }}
+        <p class="text-pink">{{ $t('incomeTitle2') }}</p>
       </h1>
 
-      <p class="text-gray text-lg">Sayohat boʻyicha maslahatlar, tavsiyalar va eng soʻnggi promolardan xabardor boʻling</p>
+      <p class="text-gray text-lg">{{ $t('incomeDescription') }}</p>
 
       <div class="flex gap-4">
         <Button class="gap-2 text-white" size="lg" @click="() => router.push('products')">
-          Boshlash
+          {{ $t('start') }}
           <Icon name="i-lucide-arrow-right" size="18" />
         </Button>
         <Button variant="outline-primary" class="gap-2" size="lg">
-          Tanishtiruv
+          {{ $t('watch') }}
           <div class="bg-primary text-white rounded-full w-[20px] h-[20px] flex justify-center items-center">
             <Icon name="i-lucide-play" size="12" />
           </div>

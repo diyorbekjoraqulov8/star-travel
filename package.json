@@ -1,7 +1,7 @@
 {
   "name": "nuxt-shadcn-dashboard",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@8.10.2+sha1.e0b68270e89c817ff88b7be62466a2128c53af02",
   "description": "Shadcn Dashboard built with Nuxt",
   "keywords": [
@@ -53,6 +53,7 @@
     "@nuxt/eslint": "^0.7.4",
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/i18n": "9.3.1",
     "@pinia/nuxt": "^0.5.1",
     "@unocss/eslint-plugin": "^0.65.2",
     "@unocss/nuxt": "^0.65.2",

@@ -45,22 +45,22 @@ const components: { title: string, href: string, description: string }[] = [
     <NavigationMenuList>
       <NavigationMenuItem>
         <NavigationMenuLink href="/products" :class="navigationMenuTriggerStyle()">
-          Tur paketlar
+          {{ $t('tourPackages') }}
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink href="/about" :class="navigationMenuTriggerStyle()">
-          Biz haqimizda
+          {{ $t('aboutUs') }}
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink href="/contact" :class="navigationMenuTriggerStyle()">
-          Biz bilan bog'lanish
+          {{ $t('contactUs') }}
         </NavigationMenuLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavigationMenuLink href="/location" :class="navigationMenuTriggerStyle()">
-          Bizning joylashuv
+          {{ $t('locationUs') }}
         </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>

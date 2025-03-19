@@ -9,7 +9,7 @@ const {data: products} = await useFetch('/api/products')
   <section>
     <NuxtLink to="products" class="mb-2 w-max flex items-center gap-1">
       <h3 class="text-2xl font-medium">
-        Tur paketlar
+        {{ $t('tourPackages') }}
       </h3>
     </NuxtLink>
     <div class="grid mb-20 gap-2 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xl:grid-cols-5">

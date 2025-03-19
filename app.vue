@@ -15,7 +15,7 @@ useHead({
     { key: 'theme-color', name: 'theme-color', content: color },
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' },
+    { rel: 'icon', href: "/startravel-logo-3.png" },
   ],
   htmlAttrs: {
     lang: 'en',
@@ -26,19 +26,20 @@ useHead({
   },
 })
 
-const title = 'Nuxt Shadcn UI - Dashboard Template'
-const description = 'This dashboard, built with Nuxt, Shadcn UI, and UnoCSS. It includes a dark mode toggle and is optimized for performance and data efficiency.'
+const title = 'Startravel – Arzon Sayohatlar, Chiptalar va Eksklyuziv Turlar'
+const description = "Startravel – dunyo bo'ylab sayohatlar, arzon chiptalar va eksklyuziv turlarni taqdim etuvchi ishonchli travel agentlik. Bugun sayohatingizni rejalashtiring va eng yaxshi takliflarimizdan foydalaning!"
+const imgUrl = "https://instagram.ftas1-1.fna.fbcdn.net/v/t51.2885-19/485002143_1727484274544934_5166117233884926465_n.jpg?_nc_ht=instagram.ftas1-1.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2QFiO43lmrcUB2JUYqx7XfHUcTW75q2-tmYwcIEyKWb3e2Siv-8z9a1gAgHlhyEwcWc&_nc_ohc=-U4otwzY8lUQ7kNvgG538Rl&_nc_gid=V9D5VzZ5RxLkcO0yZruuSQ&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYH4aYeRMx-gfjktpDW6ehUmJrLLpJ718Zc9rxZUtruRtg&oe=67E0DD72&_nc_sid=7a9f4b"
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
-  ogUrl: 'https://dashboard.dianprata.com',
-  ogImage: 'https://nuxt-shadcn-dashboard.vercel.app/social-card.png',
+  ogUrl: 'https://www.startravel.uz',
+  ogImage: imgUrl,
   twitterTitle: title,
   twitterDescription: description,
-  twitterImage: 'https://nuxt-shadcn-dashboard.vercel.app/social-card.png',
+  twitterImage: imgUrl,
   twitterCard: 'summary_large_image',
 })
 
