@@ -1,11 +1,11 @@
 <script setup lang="ts">
-
+const {t} = useI18n()
 </script>
 
 <template>
   <div class="default_navbar">
     <header class="container-wrapper relative flex items-center justify-between gap-2 py-4">
-      <nav class="flex items-center gap-x-10">
+      <nav class="flex items-center gap-x-5">
         <LazyLogo />
 
         <DefaultNavbarMenu />
@@ -18,6 +18,8 @@
           <Icon name="i-ph-phone" size="20" />
           +998 (97) 170 21 01
         </div>
+
+        <DefaultNavbarLocale />
 
         <ThemeToggle />
       </div>

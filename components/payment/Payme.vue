@@ -86,7 +86,7 @@ const details = {
       <input type="hidden" name="detail" :value="details"/>
 
 
-      <Button type="submit" class="w-full">To'lov qilish (Payme orqali)</Button>
+      <Button type="submit" class="w-full">{{ $t('payment') }} (Payme orqali)</Button>
     </form>
   </div>
 </template>
